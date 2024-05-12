@@ -1,0 +1,15 @@
+<h1>Owners</h1>
+
+<% @owners.each do |owner| %>
+  <div class="owner">
+    <h2>Name: <%= owner.name %></h2>
+    <p>Email address: <%= owner.email_address %></p>
+    <p>Contact number: <%= owner.contact_number %></p>
+    <%= link_to 'Show this owner', owner %>
+    <%= link_to 'Edit', edit_owner_path(owner) %>
+    <%= link_to 'Destroy', owner, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
+<% end %>
+
+<%= link_to 'New owner', new_owner_path %>
+

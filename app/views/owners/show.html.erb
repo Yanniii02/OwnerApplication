@@ -1,0 +1,72 @@
+<div class="owner-details">
+  <div class="owner-info">
+    <h1>Owner</h1>
+    <p><strong>Name:</strong> <%= @owner.name %></p>
+    <p><strong>Email address:</strong> <%= @owner.email_address %></p>
+    <p><strong>Contact number:</strong> <%= @owner.contact_number %></p>
+  </div>
+
+  <div class="owner-assets">
+    <div class="owner-vehicles">
+      <h2>Vehicles Owned</h2>
+      <% if @vehicles.present? %>
+        <table>
+          <tr>
+            <th>Vehicle type</th>
+            <th>Model</th>
+            <th>Color</th>
+            <th>Serial number</th>
+            <th>Purchase price</th>
+            <th>Purchase date</th>
+          </tr>
+          <% @vehicles.each do |vehicle| %>
+            <tr>
+              <td><%= vehicle.vehicle_type %></td>
+              <td><%= vehicle.model %></td>
+              <td><%= vehicle.color %></td>
+              <td><%= vehicle.serial_number %></td>
+              <td><%= vehicle.purchase_price %></td>
+              <td><%= vehicle.purchase_date %></td>
+            </tr>
+          <% end %>
+        </table>
+      <% else %>
+        <p>No vehicles owned.</p>
+      <% end %>
+    </div>
+
+    <div class="owner-properties">
+      <h2>Properties Owned</h2>
+      <% if @properties.present? %>
+        <table>
+          <tr>
+            <th>Property type</th>
+            <th>Description</th>
+            <th>Location</th>
+            <th>Purchase price</th>
+            <th>Purchase date</th>
+          </tr>
+          <% @properties.each do |property| %>
+            <tr>
+              <td><%= property.property_type %></td>
+              <td><%= property.description %></td>
+              <td><%= property.location %></td>
+              <td><%= property.purchase_price %></td>
+              <td><%= property.purchase_date %></td>
+            </tr>
+          <% end %>
+        </table>
+      <% else %>
+        <p>No properties owned.</p>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="owner-actions">
+    <%= link_to 'Show this owner', @owner %> |
+    <%= link_to 'Edit this owner', edit_owner_path(@owner) %> |
+    <%= link_to 'Back to owners', owners_path %> |
+    <%= link_to 'Delete this owner', @owner, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
+</div>
+

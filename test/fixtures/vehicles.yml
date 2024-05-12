@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  vehicle_type: MyString
+  model: MyString
+  color: MyString
+  serial_number: MyString
+  purchase_price: 1.5
+  purchase_date: 2024-05-12
+  owner: one
+
+two:
+  vehicle_type: MyString
+  model: MyString
+  color: MyString
+  serial_number: MyString
+  purchase_price: 1.5
+  purchase_date: 2024-05-12
+  owner: two

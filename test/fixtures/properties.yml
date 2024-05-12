@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  property_type: MyString
+  description: MyString
+  location: MyString
+  purchase_price: 1.5
+  purchase_date: 2024-05-12
+  owner: one
+
+two:
+  property_type: MyString
+  description: MyString
+  location: MyString
+  purchase_price: 1.5
+  purchase_date: 2024-05-12
+  owner: two
